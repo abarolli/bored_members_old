@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
 /* Prevent transitions from occuring before window loads */
 /* this is removed by JS */
 .preload * {
@@ -57,7 +61,6 @@ a {
 .logo-title {
     display: inline-block;
     margin: 0.5rem 0 0 1rem;
-    font-weight: normal;
     font-size: 2.5rem;
     white-space: nowrap;
 }
@@ -98,6 +101,7 @@ a {
 
 /* Initial landing section */
 
+
 .first-landing {
     height: calc(100vh - var(--landing-menu-height));
     display: grid;
@@ -130,7 +134,6 @@ a {
     margin: 0;
     color: white;
     width: fit-content;
-    height: fit-content;
     padding: 0.5rem 1.25rem;
     font-size: 3.25rem;
     position: relative;
@@ -157,4 +160,57 @@ a {
 #question-3 {
     align-self: center;
     justify-self: center;
+}
+
+
+/* second landing section */
+
+.second-landing {
+    height: 100vh;
+    display: grid;
+    grid-template: 100fr / repeat(2, 100fr);
+    position: relative;
+}
+
+.second-landing::after {
+    content: "";
+    clip-path: polygon(17% 0, 90% 100%, -5% 86%);
+    grid-area: 1 / 1 / 2 / 3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -40%;
+    z-index: -2;
+    background: var(--pink);
+}
+
+.landing-testimony {
+    grid-column: 2;
+    align-self: center;
+    width: 75%;
+    min-width: 49.2rem;
+    height: 30rem;
+}
+
+.testimony {
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template: 100fr / repeat(2, 100fr);
+    align-items: center;
+}
+
+.testimony-title {
+    font-size: 4rem;
+    margin-left: 1rem;
+    line-height: 5rem;
+}
+
+.testimony-description {
+    justify-self: right;
+    text-align: right;
+    font-size: 2rem;
+    margin-right: 1rem;
+    max-width: 286px;
+    color: var(--purple);
 }
