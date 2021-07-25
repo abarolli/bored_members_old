@@ -153,9 +153,9 @@ h1, h2, h3, h4, h5, h6 {
 #question-1 {
     z-index: 1;
 }
-#question-2 {
+/* #question-2 {
     transform: translateY(-0.3rem);
-}
+} */
 
 #question-3 {
     align-self: center;
