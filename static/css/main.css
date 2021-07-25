@@ -1,16 +1,45 @@
 :root {
     font-size: 62.5%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
     --purple: #2E3192;
     --pink: #EE2A7B;
     --blue: #00AEEF;
+    --landing-menu-height: 10rem;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Prevent transitions from occuring before window loads */
+/* this is removed by JS */
+.preload * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+}
+
+/* Landing page navbar */
 .landing-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
+    height: var(--landing-menu-height);
     border-bottom: 1px solid #ccc;
 }
 
@@ -28,9 +57,9 @@
 .logo-title {
     display: inline-block;
     margin: 0.5rem 0 0 1rem;
-    text-transform: uppercase;
     font-weight: normal;
     font-size: 2.5rem;
+    white-space: nowrap;
 }
 
 .logo-title-first-word {
@@ -41,6 +70,12 @@
     color: var(--pink);
 }
 
+.sign-up-in-btns {
+    margin-right: 2rem;
+}
+
+
+/* Buttons */
 
 .btn {
     display: inline-block;
@@ -54,8 +89,72 @@
     border-radius: 2.3rem;
     margin-left: 1rem;
     cursor: pointer;
+    transition: background 0.20s
 }
 
-.sign-up-in-btns {
-    margin-right: 2rem;
+.btn:hover {
+    background: #0587b6
+}
+
+/* Initial landing section */
+
+.first-landing {
+    height: calc(100vh - var(--landing-menu-height));
+    display: grid;
+    grid-template: repeat(2, 100fr) / repeat(2, 100fr);
+    position: relative;
+}
+
+.first-landing::after {
+    content: "";
+    clip-path: polygon(71% 2%, 10% 95%, 95% 85%);
+    grid-area: 1 / 1 / 3 / 3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: var(--blue);
+}
+
+.init-questions {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(4rem);
+}
+
+.question-badge {
+    margin: 0;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem 1.25rem;
+    font-size: 3.25rem;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.question-badge--primary {
+    background: var(--purple);
+    border-radius: 10px;
+}
+
+.question-badge--secondary {
+    background: var(--pink);
+}
+
+#question-1 {
+    z-index: 1;
+}
+#question-2 {
+    transform: translateY(-0.3rem);
+}
+
+#question-3 {
+    align-self: center;
+    justify-self: center;
 }
