@@ -1,0 +1,61 @@
+:root {
+    font-size: 62.5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --purple: #2E3192;
+    --pink: #EE2A7B;
+    --blue: #00AEEF;
+}
+
+.landing-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo-section {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.logo {
+    width: 15.3rem;
+    height: auto;
+}
+
+.logo-title {
+    display: inline-block;
+    margin: 0.5rem 0 0 1rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.logo-title-first-word {
+    color: var(--purple);
+}
+
+.logo-title-last-word {
+    color: var(--pink);
+}
+
+
+.btn {
+    display: inline-block;
+    border: none;
+    font-size: 1.75rem;
+    background: var(--blue);
+    width: 10rem;
+    height: fit-content;
+    color: white;
+    padding: 1rem 1.75rem;
+    border-radius: 2.3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.sign-up-in-btns {
+    margin-right: 2rem;
+}
