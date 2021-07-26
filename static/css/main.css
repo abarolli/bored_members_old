@@ -215,6 +215,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--purple);
 }
 
+.opacity-0 {
+    opacity: 0;
+}
 
 /* third landing section */
 
@@ -252,11 +255,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-left-animate {
-    animation: slide-left 0.5s ease-in;
+    animation: slide-left 0.5s 0.3s ease-in forwards;
 }
 
 .slide-right-animate {
-    animation: slide-right 0.5s ease-in;
+    animation: slide-right 0.5s 0.3s ease-in forwards;
 }
 
 @keyframes slide-left {
