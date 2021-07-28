@@ -114,7 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .drop-down__item:hover {
     background-color: lightgrey;
-    /* color: var(--blue); */
 }
 
 .hidden {
@@ -158,11 +157,11 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-.logo-title-first-word {
+.font-purple {
     color: var(--purple);
 }
 
-.logo-title-last-word {
+.font-pink {
     color: var(--pink);
 }
 
@@ -403,12 +402,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
 /* SIGN UP =================================== */
-.user-sign-up {
+
+
+.user-sign-up-in {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.sign-up-in-input {
+    height: 3rem;
+    width: 20rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    outline: none;
+    background: rgba(204, 204, 204, 0.5);
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.25rem;
+}
+
+.sign-up-in-input::placeholder {
+    color: rgba(46, 49, 146, 0.5);
 }
