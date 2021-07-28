@@ -8,7 +8,11 @@
     --landing-menu-height: 10rem;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -38,7 +42,95 @@ h1, h2, h3, h4, h5, h6 {
     -o-transition: none !important;
 }
 
+
 /* Landing page navbar */
+
+
+.down-tick {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--purple);
+}
+
+.list {
+    padding: 0;
+    cursor: pointer;
+    color: var(--purple);
+    height: 100%;
+    white-space: nowrap;
+}
+
+.list__item {
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 5rem;
+    height: 100%;
+    white-space: normal;
+}
+
+.list__item__title {
+    display: inline-flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-down {
+    background-color: white;
+    list-style: none;
+    position: absolute;
+    transition: opacity 0.15s, transform 0.15s;
+    transform: translateY(-2rem);
+    visibility: hidden;
+}
+
+.drop-down--descriptive {
+    width: 35rem;
+}
+
+
+.drop-down__item {
+    padding: 2rem 0;
+    height: 100%;
+}
+
+.drop-down--descriptive .drop-down__item {
+    display: flex;
+}
+
+.drop-down__item__description {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    padding-right: 2rem;
+}
+
+.drop-down__item__icon {
+    height: 100%;
+    align-self: center;
+    margin-right: 2rem;
+    padding-left: 2rem;
+}
+
+.drop-down__item:hover {
+    background-color: lightgrey;
+    /* color: var(--blue); */
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.drop-down.visible {
+    transform: translateY(0);
+}
+
+
 .landing-menu {
     display: flex;
     justify-content: space-between;
@@ -104,6 +196,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .first-landing {
     height: calc(100vh - var(--landing-menu-height));
+    min-height: 780px;
+    max-width: 1583px;
     display: grid;
     grid-template: repeat(2, 100fr) / repeat(2, 100fr);
     position: relative;
@@ -166,10 +260,13 @@ h1, h2, h3, h4, h5, h6 {
 /* second landing section */
 
 .landing-grid--1x2 {
-    height: 100vh;
+    height: 70vh;
+    min-height: 546px;
+    max-width: 1583px;
     display: grid;
     grid-template: 100fr / repeat(2, 100fr);
     position: relative;
+    margin-bottom: 10rem;
 }
 
 .second-landing::after {
@@ -261,6 +358,20 @@ h1, h2, h3, h4, h5, h6 {
 .slide-right-animate {
     animation: slide-right 0.5s 0.3s ease-in forwards;
 }
+.bored-team {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mr-purple {
+    height: fit-content;
+}
+
+.mr-pink {
+    height: fit-content;
+}
 
 @keyframes slide-left {
     from {
@@ -282,4 +393,10 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         transform: translateX(5rem);
     }
+}
+
+/* Footer */
+
+.footer {
+    height: 15rem;
 }
