@@ -28,6 +28,22 @@ a {
     text-decoration: none;
 }
 
+a:link {
+    color: var(--purple);
+}
+
+a:visited {
+    color: var(--purple);
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+a:active {
+    color: var(--purple);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
@@ -83,6 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.15s, transform 0.15s;
     transform: translateY(-2rem);
     visibility: hidden;
+    border: 1px solid #ccc;
 }
 
 .drop-down--descriptive {
@@ -405,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 /* SIGN UP =================================== */
 
 
-.user-sign-up-in {
+.full-viewport--center {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -435,4 +452,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .sign-up-in-input::placeholder {
     color: rgba(46, 49, 146, 0.5);
+}
+
+
+
+/* Bored Rooms ================================== */
+.table__head__header {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.full-viewport--center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+.table__row__data {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.table__row__data__description {
+    padding-right: 1rem;
+    width: 60ch;
+}
+
+.table__row:hover {
+    background: rgba(204, 204, 204, 0.5);
+    cursor: pointer;
+}
+
+.table {
+    font-size: 1.5rem;
+    margin-top: 6rem;
+    color: var(--purple);
+    border-spacing: 0;
 }
