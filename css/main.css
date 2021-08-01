@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .first-landing {
     height: calc(100vh - var(--landing-menu-height));
-    min-height: 780px;
+    min-height: 650px;
     max-width: 1583px;
     display: grid;
     grid-template: repeat(2, 100fr) / repeat(2, 100fr);
@@ -439,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }
 
-.sign-up-in-input {
+.user-input {
     height: 3rem;
     width: 20rem;
     margin-bottom: 2rem;
@@ -451,7 +451,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.25rem;
 }
 
-.sign-up-in-input::placeholder {
+.user-input::placeholder {
     color: rgba(46, 49, 146, 0.5);
 }
 
@@ -462,9 +462,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 2rem 2rem 2rem;
 }
 
-.full-viewport--center-horizontal {
+.full-viewport {
+    height: 100%;
     display: flex;
-    justify-content: center;
+}
+
+.full-viewport--flex-column {
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters {
+    margin-top: 2rem;
 }
 
 .table__row__data {
@@ -487,4 +496,5 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 6rem;
     color: var(--purple);
     border-spacing: 0;
+    width: fit-content;
 }
